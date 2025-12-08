@@ -16,7 +16,6 @@ class AccountWindow(ctk.CTkToplevel):
         self.geometry("800x450")
         self.grab_set()
         self.configure(fg_color=COLORS["bg_root"])
-
         # Title label
         title = ctk.CTkLabel(
             self,
