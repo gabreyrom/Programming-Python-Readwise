@@ -1,7 +1,7 @@
 import customtkinter as ctk
 import ast
 from tkinter import messagebox
-from GUI.users_handler_functions import update_books_read
+from users_handler_functions import update_books_read
 from palette import COLORS
 
 
@@ -16,7 +16,6 @@ class AccountWindow(ctk.CTkToplevel):
         self.geometry("800x450")
         self.grab_set()
         self.configure(fg_color=COLORS["bg_root"])
-
         # Title label
         title = ctk.CTkLabel(
             self,
