@@ -5,10 +5,6 @@
 # Idea
 *.DS_Store
 
-# Csv files
-/data
-*.csv
-
 list.py
 
 *.pyc
