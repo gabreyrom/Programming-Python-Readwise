@@ -2,10 +2,10 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
-def recommend(isbn, df, n):
+def recommend(isbn, df, n=5):
     """
     Recommend a number of titles based on the chosen ISBN.
-    This function may behave strangely if n is too high.
+    This function may behave strangely if n is too high (>10)
     :param isbn: ISBN-13 of the chosen book
     :param df: the variable storing clustered_df.csv
     :param n: number of books to recommend
