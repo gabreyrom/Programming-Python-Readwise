@@ -13,7 +13,7 @@ class AccountWindow(ctk.CTkToplevel):
         self.user_data = user_data
 
         self.title("Account Information")
-        self.geometry("800x450")
+        self.geometry("900x850")
         self.grab_set()
         self.configure(fg_color=COLORS["bg_root"])
         # Title label
