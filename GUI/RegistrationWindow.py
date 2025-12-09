@@ -156,7 +156,7 @@ class RegistrationWindow(ctk.CTkToplevel):
             "password": password,
             "first_name": first,
             "last_name": last,
-            "birthdate": birthdate,
+            "birth_date": birthdate,
             "books_read": ""
         }
 

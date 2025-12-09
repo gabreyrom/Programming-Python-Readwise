@@ -107,7 +107,7 @@ class MainPage(ctk.CTkFrame):
         self.button_canvas.pack(expand=True, pady=10)
 
         # 3 main section buttons
-        button_names = ["Chat Assistant", "Top Books 500 by Avg Rating", "Account Info"]
+        button_names = ["Chat Assistant", "Top 500 Books by Avg Rating", "Account Info"]
 
         # Another grid frame (to center everything)
         buttons_frame = ctk.CTkFrame(self.button_canvas, fg_color=COLORS["bg_main"])
@@ -126,7 +126,7 @@ class MainPage(ctk.CTkFrame):
             # Nested if else for assigning the correct helper function to the button
             if name == "Chat Assistant":
                 helper_func = self.open_chat
-            elif name == "Top Books 500 by Avg Rating":
+            elif name == "Top 500 Books by Avg Rating":
                 helper_func = self.open_rating
             elif name == "Account Info":
                 helper_func = self.open_account
