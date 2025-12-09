@@ -39,11 +39,14 @@ def load_users():
         save_users(df)
         return df
 
-def get_user(username: str):
+def get_user(username: str, data = None):
     """
     Return a dict with user info if username exists, else None.
     """
-    df = load_users()
+    if data is None:
+        df = load_users()
+    else:
+        df = data
 
     match = df[df["username"] == username]
     if match.empty:
@@ -59,11 +62,14 @@ def get_user(username: str):
     return user
 
 
-def add_user(user_data: dict) -> None:
+def add_user(user_data: dict, data = None):
     """
-    Append a new user to the DataFrame and save.da
+    Append a new user to the DataFrame and save.
     """
-    df = load_users()
+    if data is None:
+        df = load_users()
+    else:
+        df = data
 
     # Check for non empty username
     username = user_data.get("username", "").strip()
@@ -80,7 +86,10 @@ def add_user(user_data: dict) -> None:
     df = pd.concat([df, pd.DataFrame([row])], ignore_index=True)
 
     # Save the dataframe
-    save_users(df)
+    if data is None:
+        save_users(df)
+    else:
+        return "User added succesfully"
 
 def serialize_books_read(books_read:set):
     """
